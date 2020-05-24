@@ -1,0 +1,234 @@
+/* generic */
+:root{
+    --orange:#f18119;
+    --darkgrey:#404040;
+    --white:#fff;
+}
+
+body{
+    font-size: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, p{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    display: inline-block;
+}
+
+/* layout */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto ;
+   height: 99.8vh;
+   border-right: 1px solid #989898;
+   border-bottom: 1px solid #989898;
+   border-top: 1px solid #989898;
+
+}
+
+main{
+    width: 59%;
+    max-width: 564px;
+    background-image: url('../images/dark-ribs.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside{
+    width: 40%;
+    margin: 0 auto;
+    max-width: 306px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+
+.logo div{
+   
+    margin: 0 auto;
+    width: 181px;
+    height: 18px;
+    background: transparent linear-gradient(270deg, #FF895D 0%, #DF4E13 0%, #FFA51D 100%) 0% 0% no-repeat padding-box;
+    margin-bottom: 6px;
+}
+
+/* typo */
+.main-heading{
+    position: relative;
+    top:50%;
+    transform: translate(0, -50%);
+}
+main h1{
+   
+    margin:0 auto ;
+    max-width: 492px;
+    padding: 0 2.25rem;
+    color: rgba(255,255,255,.75);
+    font-size: 56px;
+    font-weight:400;
+}
+
+
+
+main a{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.75rem;
+    text-decoration: none;
+    font-weight: 800;
+    color: var(--orange);
+
+    
+}
+
+.logo p{
+    color: var(--orange);
+    text-transform: uppercase;
+    font-size: 0.625rem;
+    letter-spacing: 1.4px;
+    font-weight: 800;
+
+}
+
+aside h2{
+    color: #404040;
+    font-size: 1.75rem;
+    margin-bottom: .5em;
+}
+
+aside a{
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 800;
+    text-decoration: none;
+    margin-bottom: 1em;
+}
+
+aside p{
+    color: #5A5A5A;
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+
+
+
+/* form */
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 253px;
+}
+form input{
+    padding: 7px;
+    border: 1px solid #989898;
+    border-radius: 4px;
+    margin-bottom: 1em;
+}
+form input::placeholder{
+    text-align: center;
+    color: #98989885;
+}
+
+.submit-btn{
+    background: transparent linear-gradient(270deg, #FF713B 0%, #FFA51D 100%) 0% 0% no-repeat padding-box;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 800;
+    color: rgba(255,255,255,.75);
+    padding: 13px 26px;
+}
+
+.submit-btn:hover,
+.submit-btn:active{
+    background: transparent linear-gradient(270deg,#FFA51D 100%,  #FF713B 0%) 0% 0% no-repeat padding-box;  
+}
+form p{
+
+    max-width: 144px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form p small{
+    font-size: 10px;
+    color: #989898;
+}
+
+/* media queries */
+
+@media screen and (max-width:960px){
+    .container{
+        flex-direction: column;
+        height: 99.5vh;
+        border-left: 1px solid #989898;
+        justify-content: start;
+        
+    }
+    main{
+        width: 100%;
+        max-width: 100%;
+    }
+    .main-heading{
+        position: unset;
+        top: unset;
+        transform: unset;
+
+    }
+    /* typo */
+    main h1{
+        font-size: 36px;
+        margin-bottom: 2em;
+    }
+    main .logo{
+        margin-bottom: 5.25rem;
+    }
+    .main-heading{
+        margin-bottom: 32px;
+    }
+
+    aside{
+        padding:36px 19px 60px 19px;
+    }
+    
+    aside{
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+        max-width: 90%;
+    }
+
+}
+
+@media screen and (max-width:560px){
+   
+    .container{
+        height: auto;
+    }
+    aside h2{
+        text-align: center;
+    }
+}
